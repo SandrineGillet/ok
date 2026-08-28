@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Mail, Phone, MapPin, Linkedin, Menu, X, Play, Calendar, ArrowLeft, ArrowRight, Music, Mic2, Radio, Building2, Video, Mic, Check, Truck } from 'lucide-react';
 import { WaveformPlayer } from './components/WaveformPlayer';
 import { CompactAudioPlayer } from './components/CompactAudioPlayer';
+import { Analytics } from '@vercel/analytics/react';
 
 type Page = 'bio' | 'productions' | 'portraits' | 'unite-mobile' | 'actualites' | 'contact';
 type ProductionId = 'podcasts-culturels' | 'emissions-speciales' | 'info-locale' | 'podcasts-inst';
@@ -1532,6 +1533,7 @@ export default function App() {
           scrollbar-width: none;
         }
       `}</style>
+      <Analytics />
     </div>
   );
 }
